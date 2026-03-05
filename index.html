@@ -44,6 +44,7 @@
 
   .container { max-width: 460px; width:100%; position:relative; z-index:1; }
 
+  /* ── HERO ── */
   .hero {
     width:100%;
     background: linear-gradient(175deg, #1a1f13 0%, var(--bg) 100%);
@@ -66,8 +67,13 @@
   }
 
   .subtitle { margin-top:10px; font-size:12px; color:var(--muted2); font-style:italic; line-height:1.6; }
+
+  /* ── MAIN CONTENT ── */
   .main { padding: 22px 16px 0; width:100%; }
+
   .section-title { font-size:9px; letter-spacing:3.5px; color:var(--muted); text-transform:uppercase; margin-bottom:13px; }
+
+  /* ── TRIGGERS ── */
   .triggers { display:flex; gap:9px; flex-wrap:wrap; margin-bottom:18px; }
 
   .trigger-btn {
@@ -93,6 +99,7 @@
     box-shadow:0 4px 16px var(--accent-glow);
   }
 
+  /* ── COMPACT TIMER ── */
   .timer-bar {
     background:var(--surface);
     border:1px solid var(--border);
@@ -115,6 +122,7 @@
   }
 
   .timer-display.done { color:var(--success); }
+
   .timer-right { flex:1; display:flex; flex-direction:column; gap:8px; }
   .timer-presets { display:flex; gap:6px; }
 
@@ -151,6 +159,7 @@
 
   .start-btn.running { background:transparent; border:1.5px solid var(--border); color:var(--muted2); box-shadow:none; }
 
+  /* ── ANCHOR ── */
   .anchor-bar {
     display:flex;
     align-items:flex-start;
@@ -166,6 +175,7 @@
   .anchor-label { font-size:9px; letter-spacing:3px; color:var(--accent-light); text-transform:uppercase; margin-bottom:5px; }
   .anchor-text { font-size:12.5px; color:var(--muted2); line-height:1.7; font-style:italic; }
 
+  /* ── DAY-1 CALLBACK ── */
   .callback-bar {
     display:none;
     align-items:flex-start;
@@ -180,8 +190,10 @@
   .callback-bar.show { display:flex; }
   .callback-label { font-size:9px; letter-spacing:3px; color:var(--accent2); text-transform:uppercase; margin-bottom:5px; }
   .callback-text { font-size:12.5px; color:var(--muted2); line-height:1.7; font-style:italic; }
+
   .divider { border:none; border-top:1px solid var(--border); margin:20px 0; }
 
+  /* ── PROTOCOL CARDS ── */
   .protocol-card {
     background:var(--surface);
     border:1px solid var(--border);
@@ -207,8 +219,10 @@
   }
 
   .protocol-card.checked .card-header { border-bottom-color:rgba(91,104,64,0.2); }
+
   .step-num { font-family:'Bebas Neue',sans-serif; font-size:24px; color:var(--accent-light); line-height:1; min-width:26px; transition:color 0.2s; }
   .protocol-card.checked .step-num { color:var(--success); }
+
   .step-info { flex:1; }
   .step-name { font-size:13.5px; font-weight:500; color:var(--text); margin-bottom:1px; transition:color 0.2s; }
   .protocol-card.checked .step-name { color:var(--muted2); text-decoration:line-through; text-decoration-color:var(--accent); }
@@ -226,11 +240,17 @@
     flex-shrink:0;
   }
 
-  .protocol-card.checked .check-indicator { background:var(--success); border-color:var(--success); color:#0d0f0a; }
+  .protocol-card.checked .check-indicator {
+    background:var(--success);
+    border-color:var(--success);
+    color:#0d0f0a;
+  }
+
   .card-body { padding:12px 16px; }
   .step-desc { font-size:12px; color:var(--muted2); line-height:1.75; margin-bottom:8px; }
   .step-action { font-size:11px; color:var(--accent2); font-weight:500; letter-spacing:0.3px; }
 
+  /* ── JOURNAL SECTION ── */
   .journal-section {
     background:var(--surface);
     border:1px solid var(--border);
@@ -277,6 +297,7 @@
   .copy-btn:hover { background:rgba(91,104,64,0.18); }
   .copy-btn.copied { background:rgba(143,175,88,0.12); border-color:rgba(143,175,88,0.3); color:var(--success); }
 
+  /* ── SLIP LOGGER ── */
   .slip-section {
     background:var(--surface);
     border:1px solid var(--border);
@@ -300,9 +321,17 @@
     letter-spacing:0.3px;
   }
 
+  .slip-toggle:hover { background:rgba(196,122,90,0.07); border-color:rgba(196,122,90,0.4); }
+
   .slip-form { display:none; margin-top:12px; }
   .slip-form.open { display:block; }
-  .slip-form textarea { min-height:72px; margin-top:6px; font-size:12.5px; }
+
+  .slip-form textarea {
+    min-height:72px;
+    margin-top:6px;
+    font-size:12.5px;
+  }
+
   .slip-label { font-size:11px; color:var(--muted2); margin-bottom:4px; }
 
   .slip-save {
@@ -320,6 +349,9 @@
     transition:all 0.2s;
   }
 
+  .slip-save:hover { background:rgba(196,122,90,0.2); }
+
+  /* ── SPOTIFY ── */
   .spotify-section {
     background:var(--surface);
     border:1px solid var(--border);
@@ -341,8 +373,10 @@
     font-weight:700;
     text-decoration:none;
     letter-spacing:0.3px;
+    transition:opacity 0.2s;
   }
 
+  /* ── STREAK ── */
   .streak-row {
     display:flex;
     align-items:center;
@@ -359,10 +393,22 @@
   .streak-days { font-size:10.5px; color:var(--muted2); margin-top:1px; }
   .streak-actions { display:flex; flex-direction:column; gap:6px; align-items:flex-end; }
 
-  .s-btn { padding:7px 14px; border-radius:999px; font-size:11px; font-family:'DM Sans',sans-serif; font-weight:500; cursor:pointer; transition:all 0.18s; white-space:nowrap; }
+  .s-btn {
+    padding:7px 14px;
+    border-radius:999px;
+    font-size:11px;
+    font-family:'DM Sans',sans-serif;
+    font-weight:500;
+    cursor:pointer;
+    transition:all 0.18s;
+    white-space:nowrap;
+  }
+
   .s-clean { background:rgba(143,175,88,0.1); color:var(--success); border:1.5px solid rgba(143,175,88,0.28); }
+  .s-clean:hover { background:rgba(143,175,88,0.18); }
   .s-reset { background:transparent; color:var(--muted2); border:1.5px solid var(--border); }
 
+  /* ── FLOATING JOURNAL BUTTON ── */
   .fab {
     position:fixed;
     bottom:28px;
@@ -387,6 +433,7 @@
 
   .fab:active { transform:scale(0.96); }
 
+  /* ── TOAST ── */
   .toast {
     position:fixed;
     bottom:80px;
@@ -406,25 +453,35 @@
   }
 
   .toast.show { transform:translateX(-50%) translateY(0); }
+
   @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
   .pulsing { animation:pulse 1.4s ease-in-out infinite; }
+
+  /* scroll smooth */
   html { scroll-behavior:smooth; }
 </style>
 </head>
 <body>
 <div class="container">
+
+  <!-- HERO -->
   <div class="hero">
     <div class="label">Protocol v1</div>
     <h1>URGE<br>INTERRUPT</h1>
     <p class="subtitle">Follow the steps. Every time. No negotiation.</p>
   </div>
+
   <div class="main">
+
+    <!-- TRIGGERS -->
     <div class="section-title" style="margin-top:4px;">What's triggering right now?</div>
     <div class="triggers">
       <button class="trigger-btn" onclick="selectTrigger(this,'night')">🌙 Late Night</button>
       <button class="trigger-btn" onclick="selectTrigger(this,'boredom')">😐 Boredom</button>
       <button class="trigger-btn" onclick="selectTrigger(this,'stress')">🔥 Stress / Anger</button>
     </div>
+
+    <!-- TIMER -->
     <div class="timer-bar">
       <div class="timer-display" id="timer-display">05:00</div>
       <div class="timer-right">
@@ -436,6 +493,8 @@
         <button class="start-btn" id="start-btn" onclick="toggleTimer()">START</button>
       </div>
     </div>
+
+    <!-- ANCHOR -->
     <div class="anchor-bar">
       <div class="anchor-icon">🪔</div>
       <div>
@@ -443,6 +502,8 @@
         <div class="anchor-text" id="mantra-text">"Bajrang Bali didn't pick up the mountain by giving in to what was easy. Neither will you."</div>
       </div>
     </div>
+
+    <!-- DAY-1 CALLBACK -->
     <div class="callback-bar" id="callback-bar">
       <div class="anchor-icon">📜</div>
       <div>
@@ -450,13 +511,20 @@
         <div class="callback-text" id="callback-text"></div>
       </div>
     </div>
+
     <div class="divider"></div>
+
+    <!-- PROTOCOL STEPS -->
     <div id="protocol-steps"></div>
+
+    <!-- JOURNAL -->
     <div class="journal-section" id="journal-section">
       <div class="section-title">Write it out</div>
       <textarea id="journal-input" placeholder="What's in your head right now? One sentence or twenty — just get it out."></textarea>
       <button class="copy-btn" id="copy-btn" onclick="copyForDonna()">📋 Copy for Donna</button>
     </div>
+
+    <!-- SLIP LOGGER -->
     <div class="slip-section">
       <button class="slip-toggle" onclick="toggleSlip()">I slipped — log it honestly</button>
       <div class="slip-form" id="slip-form">
@@ -465,11 +533,15 @@
         <button class="slip-save" onclick="saveSlip()">Save & Reset Streak</button>
       </div>
     </div>
+
+    <!-- SPOTIFY -->
     <div class="spotify-section">
       <div class="section-title">🎧 What to play</div>
       <div class="spotify-mood" id="spotify-mood">Select a trigger above to get a music recommendation.</div>
       <div id="spotify-link-container"></div>
     </div>
+
+    <!-- STREAK -->
     <div class="streak-row">
       <div>
         <div class="streak-label">Current Streak</div>
@@ -481,39 +553,44 @@
         <button class="s-btn s-reset" onclick="resetStreak()">↺ Reset</button>
       </div>
     </div>
+
   </div>
 </div>
+
+<!-- FLOATING JOURNAL BUTTON -->
 <button class="fab" onclick="jumpToJournal()">✍️ Write Now</button>
+
 <div class="toast" id="toast"></div>
+
 <script>
 const protocols = {
   night: [
     { num:"01", name:"Get Out of Bed", time:"Immediately", icon:"🛏️", desc:"The bed at night is the trap. Stand up. Walk to another room or stand by the window. The urge is location-linked — break the location.", action:"→ Stand up right now. Literally." },
     { num:"02", name:"Cold Water on Face", time:"30 seconds", icon:"💧", desc:"Splash cold water on your face 3 times. Activates the dive reflex — slows heart rate, clears mental fog. Simple, clinical, works.", action:"→ Go to the bathroom. Do it." },
     { num:"03", name:"Headphones On", time:"1 minute", icon:"🎧", desc:"Scrolling feeds the urge. Replace screen with sound. Not chill, not romantic. Use the music suggestion above.", action:"→ No screen. Audio only." },
-    { num:"04", name:"Write One Sentence", time:"2 minutes", icon:"✍️", desc:"Tap Write Now below. One sentence: what your life looks like in 3 years. The KAM role. The freedom. The version of you who won.", action:"→ Your future self is watching this moment." },
+    { num:"04", name:"Write One Sentence", time:"2 minutes", icon:"✍️", desc:"Tap 'Write Now' below. One sentence: what your life looks like in 3 years. The KAM role. The freedom. The version of you who won.", action:"→ Your future self is watching this moment." },
     { num:"05", name:"Breathe & Sleep", time:"5 minutes", icon:"🌬️", desc:"4-7-8 breathing: inhale 4, hold 7, exhale 8. Repeat 4 times. Physically shifts your nervous system to rest. You've won this round.", action:"→ Close your eyes. You did it." }
   ],
   boredom: [
-    { num:"01", name:"Name the Boredom", time:"10 seconds", icon:"🧠", desc:"Say it out loud: I'm bored. That's all this is. Naming the state breaks autopilot. You're not turned on — you're just doing nothing.", action:"→ Say it. Name it. Own it." },
-    { num:"02", name:"Move Your Body", time:"5-10 minutes", icon:"💪", desc:"20 pushups, 20 squats, a walk around the block. Boredom + stillness = urge. Movement is the fastest pattern interrupt.", action:"→ Drop and give 20. Right now." },
+    { num:"01", name:"Name the Boredom", time:"10 seconds", icon:"🧠", desc:"Say it out loud: 'I'm bored. That's all this is.' Naming the state breaks autopilot. You're not turned on — you're just doing nothing.", action:"→ Say it. Name it. Own it." },
+    { num:"02", name:"Move Your Body", time:"5–10 minutes", icon:"💪", desc:"20 pushups, 20 squats, a walk around the block. Boredom + stillness = urge. Movement is the fastest pattern interrupt.", action:"→ Drop and give 20. Right now." },
     { num:"03", name:"Put on Music", time:"1 minute", icon:"🎧", desc:"Use the music suggestion above. High energy — let it pull you out of the spiral. Stay off social, stay off reels.", action:"→ Audio on. Screen down." },
-    { num:"04", name:"Write It Out", time:"5 minutes", icon:"✍️", desc:"Tap Write Now below. Boredom is often frustration in disguise — get it out before it turns into something else.", action:"→ Open the journal. Start typing." },
-    { num:"05", name:"Log the Win", time:"1 minute", icon:"✅", desc:"Add a line in the journal: what triggered, what time, what you chose instead. That log is proof you can do this.", action:"→ Document it. Proof stacks up." }
+    { num:"04", name:"Write It Out", time:"5 minutes", icon:"✍️", desc:"Tap 'Write Now' below. Boredom is often frustration in disguise — get it out before it turns into something else.", action:"→ Open the journal. Start typing." },
+    { num:"05", name:"Log the Win", time:"1 minute", icon:"✅", desc:"Add a line in the journal: what triggered, what time, what you chose instead. That log is proof you can do this. Stack the proof.", action:"→ Document it. Proof stacks up." }
   ],
   stress: [
     { num:"01", name:"Stop. Don't Act.", time:"10 seconds", icon:"✋", desc:"When stress hits, the urge is a sedative. You're not seeking pleasure — you're seeking relief. Recognizing this changes everything. Just pause.", action:"→ Stop. One breath." },
     { num:"02", name:"Box Breathing", time:"3 minutes", icon:"🟦", desc:"Inhale 4 → Hold 4 → Exhale 4 → Hold 4. Repeat 5 times. Navy SEALs use this under fire. Physically lowers cortisol. Start the timer.", action:"→ 5 rounds. Non-negotiable." },
-    { num:"03", name:"Write the Anger", time:"5 minutes", icon:"🔥", desc:"Tap Write Now below. Write what's pissing you off — no filter. Anger stored inside seeks outlets. Give it one that doesn't cost you.", action:"→ Dump it. All of it." },
+    { num:"03", name:"Write the Anger", time:"5 minutes", icon:"🔥", desc:"Tap 'Write Now' below. Write what's pissing you off — no filter. Anger stored inside seeks outlets. Give it one that doesn't cost you.", action:"→ Dump it. All of it." },
     { num:"04", name:"Invoke Hanuman Ji", time:"2 minutes", icon:"🙏", desc:"Not performance — presence. Chant Hanuman Chalisa or say his name 21 times. He guides the righteous path. This is a righteous moment.", action:"→ 21 times. His name. Your anchor." },
     { num:"05", name:"Gym or Walk", time:"However long", icon:"🚶", desc:"Stress energy needs a physical exit. You have a gym — use it. Even 10 minutes outside resets more than you think. The urge cannot survive movement.", action:"→ Get outside your four walls." }
   ]
 };
 
 const mantras = {
-  night:   '"Bajrang Bali did not pick up the mountain by giving in to what was easy. Neither will you."',
-  boredom: '"Krishna told Arjuna: act without attachment to the outcome. Right now, your action is simply — do not."',
-  stress:  '"The anger you feel is energy. The question is only: who gets to use it — you, or the urge?"'
+  night:   `"Bajrang Bali didn't pick up the mountain by giving in to what was easy. Neither will you."`,
+  boredom: `"Krishna told Arjuna: act without attachment to the outcome. Right now, your action is simply — don't."`,
+  stress:  `"The anger you feel is energy. The question is only: who gets to use it — you, or the urge?"`
 };
 
 const spotifyMoods = {
@@ -522,30 +599,42 @@ const spotifyMoods = {
   stress:  { text:"Match the energy first, then calm it. Start intense for 5 mins, then switch to <strong>Hanuman Chalisa</strong>.", query:"Hanuman Chalisa devotional" }
 };
 
+// Storage helpers
 function store(key, val) { try { localStorage.setItem(key, typeof val === 'object' ? JSON.stringify(val) : val); } catch(e){} }
 function load(key, fallback) { try { const v = localStorage.getItem(key); return v !== null ? v : fallback; } catch(e){ return fallback; } }
 function loadJSON(key, fallback) { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch(e){ return fallback; } }
 
-let selectedTrigger = null, timerInterval = null, timerRunning = false, timerSeconds = 300, slipOpen = false;
+let selectedTrigger = null;
+let timerInterval = null;
+let timerRunning = false;
+let timerSeconds = 300;
 let streak = parseInt(load('uip_streak','0'));
+let slipOpen = false;
+
 document.getElementById('streak-num').textContent = streak;
 
+// Day-1 callback: show if streak >= 7 and day-1 journal exists
 function checkCallback() {
   if (streak >= 7) {
-    const d1 = load('uip_day1_journal','');
-    if (d1) { document.getElementById('callback-text').textContent = d1; document.getElementById('callback-bar').classList.add('show'); }
+    const d1 = load('uip_day1_journal', '');
+    if (d1) {
+      document.getElementById('callback-text').textContent = d1;
+      document.getElementById('callback-bar').classList.add('show');
+    }
   }
 }
 checkCallback();
 
 function selectTrigger(btn, type) {
   document.querySelectorAll('.trigger-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active'); selectedTrigger = type;
+  btn.classList.add('active');
+  selectedTrigger = type;
   renderProtocol(type);
   document.getElementById('mantra-text').textContent = mantras[type];
   const mood = spotifyMoods[type];
   document.getElementById('spotify-mood').innerHTML = mood.text;
-  document.getElementById('spotify-link-container').innerHTML = '<a class="spotify-link" href="https://open.spotify.com/search/'+encodeURIComponent(mood.query)+'" target="_blank">Open in Spotify →</a>';
+  document.getElementById('spotify-link-container').innerHTML =
+    `<a class="spotify-link" href="https://open.spotify.com/search/${encodeURIComponent(mood.query)}" target="_blank">Open in Spotify →</a>`;
 }
 
 function renderProtocol(type) {
@@ -553,24 +642,43 @@ function renderProtocol(type) {
   container.innerHTML = '';
   protocols[type].forEach((step, i) => {
     const card = document.createElement('div');
-    card.className = 'protocol-card'; card.id = 'card-'+i;
-    card.innerHTML = '<div class="card-header" onclick="toggleCheck('+i+'"><div class="step-num">'+step.num+'</div><div class="step-info"><div class="step-name">'+step.name+'</div><div class="step-time">'+step.time+'</div></div><div class="step-icon">'+step.icon+'</div><div class="check-indicator">✓</div></div><div class="card-body"><div class="step-desc">'+step.desc+'</div><div class="step-action">'+step.action+'</div></div>';
+    card.className = 'protocol-card';
+    card.id = `card-${i}`;
+    card.innerHTML = `
+      <div class="card-header">
+        <div class="step-num">${step.num}</div>
+        <div class="step-info">
+          <div class="step-name">${step.name}</div>
+          <div class="step-time">${step.time}</div>
+        </div>
+        <div class="step-icon">${step.icon}</div>
+        <div class="check-indicator">✓</div>
+      </div>
+      <div class="card-body">
+        <div class="step-desc">${step.desc}</div>
+        <div class="step-action">${step.action}</div>
+      </div>`;
     container.appendChild(card);
+    card.querySelector('.card-header').addEventListener('click', function() { toggleCheck(i); });
     setTimeout(() => card.classList.add('visible'), i * 75);
   });
 }
 
 function toggleCheck(i) {
-  const card = document.getElementById('card-'+i);
+  const card = document.getElementById(`card-${i}`);
   card.classList.toggle('checked');
   const checked = document.querySelectorAll('.protocol-card.checked').length;
   const total = document.querySelectorAll('.protocol-card').length;
-  if (checked === total && total > 0) setTimeout(() => showToast('🔥 All steps done. You held.'), 300);
+  if (checked === total && total > 0) {
+    setTimeout(() => showToast('🔥 All steps done. You held.'), 300);
+  }
 }
 
+// Timer
 function setTimer(mins, btn) {
   if (timerRunning) return;
-  timerSeconds = mins * 60; updateTimerDisplay();
+  timerSeconds = mins * 60;
+  updateTimerDisplay();
   document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('sel'));
   btn.classList.add('sel');
 }
@@ -578,18 +686,25 @@ function setTimer(mins, btn) {
 function updateTimerDisplay() {
   const m = Math.floor(timerSeconds/60).toString().padStart(2,'0');
   const s = (timerSeconds%60).toString().padStart(2,'0');
-  document.getElementById('timer-display').textContent = m+':'+s;
+  document.getElementById('timer-display').textContent = `${m}:${s}`;
 }
 
 function toggleTimer() {
   const display = document.getElementById('timer-display');
   const btn = document.getElementById('start-btn');
-  if (timerRunning) { clearInterval(timerInterval); timerRunning = false; btn.textContent = 'START'; btn.classList.remove('running'); display.classList.remove('pulsing'); return; }
-  timerRunning = true; btn.textContent = 'STOP'; btn.classList.add('running'); display.classList.add('pulsing');
+  if (timerRunning) {
+    clearInterval(timerInterval); timerRunning = false;
+    btn.textContent = 'START'; btn.classList.remove('running');
+    display.classList.remove('pulsing'); return;
+  }
+  timerRunning = true; btn.textContent = 'STOP'; btn.classList.add('running');
+  display.classList.add('pulsing');
   timerInterval = setInterval(() => {
-    timerSeconds--; updateTimerDisplay();
+    timerSeconds--;
+    updateTimerDisplay();
     if (timerSeconds <= 0) {
-      clearInterval(timerInterval); timerRunning = false; btn.textContent = 'START'; btn.classList.remove('running');
+      clearInterval(timerInterval); timerRunning = false;
+      btn.textContent = 'START'; btn.classList.remove('running');
       display.classList.remove('pulsing'); display.classList.add('done');
       showToast('✓ Done. You held.');
       setTimeout(() => display.classList.remove('done'), 3000);
@@ -598,6 +713,7 @@ function toggleTimer() {
   }, 1000);
 }
 
+// Journal
 function jumpToJournal() {
   document.getElementById('journal-section').scrollIntoView({ behavior:'smooth', block:'center' });
   setTimeout(() => document.getElementById('journal-input').focus(), 400);
@@ -606,50 +722,73 @@ function jumpToJournal() {
 function copyForDonna() {
   const text = document.getElementById('journal-input').value.trim();
   if (!text) { showToast('Nothing written yet.'); return; }
-  if (streak === 0 && !load('uip_day1_journal','')) store('uip_day1_journal', text);
+
+  // Save day-1 journal if streak is 0 (first time)
+  if (streak === 0 && !load('uip_day1_journal','')) {
+    store('uip_day1_journal', text);
+  }
+
   const trigger = selectedTrigger || 'unknown';
   const time = new Date().toLocaleTimeString('en-IN', { hour:'2-digit', minute:'2-digit' });
-  const out = '[Urge Protocol — '+trigger+', '+time+']\n\n'+text;
+  const out = `[Urge Protocol — ${trigger}, ${time}]\n\n${text}`;
   navigator.clipboard.writeText(out).then(() => {
     const b = document.getElementById('copy-btn');
-    b.textContent = '✓ Copied! Paste to Donna.'; b.classList.add('copied');
+    b.textContent = '✓ Copied! Paste to Donna.';
+    b.classList.add('copied');
     setTimeout(() => { b.textContent = '📋 Copy for Donna'; b.classList.remove('copied'); }, 3000);
   }).catch(() => showToast('Long-press to copy manually.'));
 }
 
-function toggleSlip() { slipOpen = !slipOpen; document.getElementById('slip-form').classList.toggle('open', slipOpen); }
+// Slip logger
+function toggleSlip() {
+  slipOpen = !slipOpen;
+  document.getElementById('slip-form').classList.toggle('open', slipOpen);
+}
 
 function saveSlip() {
   const text = document.getElementById('slip-input').value.trim();
   if (!text) { showToast('Write what triggered it first.'); return; }
+
+  // Save slip log
   const slips = loadJSON('uip_slips', []);
   slips.push({ date: new Date().toLocaleDateString('en-IN'), trigger: selectedTrigger || 'unknown', note: text });
   store('uip_slips', slips);
-  streak = 0; store('uip_streak', streak);
+
+  // Reset streak
+  streak = 0;
+  store('uip_streak', streak);
   document.getElementById('streak-num').textContent = streak;
+
   document.getElementById('slip-input').value = '';
-  slipOpen = false; document.getElementById('slip-form').classList.remove('open');
+  slipOpen = false;
+  document.getElementById('slip-form').classList.remove('open');
   showToast('Logged. Reset. Start again — no shame.');
 }
 
+// Streak
 function markClean() {
-  streak++; store('uip_streak', streak);
+  streak++;
+  store('uip_streak', streak);
   document.getElementById('streak-num').textContent = streak;
-  checkCallback(); showToast('🔥 '+streak+' day streak. Keep going.');
+  checkCallback();
+  showToast(`🔥 ${streak} day streak. Keep going.`);
 }
 
 function resetStreak() {
-  streak = 0; store('uip_streak', streak);
+  streak = 0;
+  store('uip_streak', streak);
   document.getElementById('streak-num').textContent = streak;
   showToast('Reset. Start again. No shame.');
 }
 
 function showToast(msg) {
   const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
+  t.textContent = msg;
+  t.classList.add('show');
   setTimeout(() => t.classList.remove('show'), 3000);
 }
 
+// Default
 selectTrigger(document.querySelector('.trigger-btn'), 'night');
 document.querySelector('.trigger-btn').classList.add('active');
 </script>
